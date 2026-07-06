@@ -149,7 +149,7 @@ export function HeroSection() {
               {/* Laptop dashboard mockup */}
               <motion.div variants={floatVar(0.1, 0)} className="absolute left-1/2 top-1/2 w-[88%] -translate-x-1/2 -translate-y-1/2">
                 <div className="glass rounded-2xl p-2 shadow-premium">
-                  <div className="rounded-xl border border-border bg-white p-3">
+                  <div className="rounded-xl border border-border bg-card p-3">
                     {/* Window chrome */}
                     <div className="mb-3 flex items-center gap-1.5">
                       <span className="h-2.5 w-2.5 rounded-full bg-[#FF5F57]" />
@@ -315,7 +315,7 @@ export function HeroSection() {
                 variants={floatVar(1.1, 60)}
                 className="absolute right-6 bottom-4"
               >
-                <div className="inline-flex items-center gap-1 rounded-full bg-white px-2 py-1 text-[10px] font-semibold text-wa-green-dark shadow-premium">
+                <div className="inline-flex items-center gap-1 rounded-full bg-card px-2 py-1 text-[10px] font-semibold text-wa-green-dark shadow-premium">
                   <Check className="h-3 w-3" />
                   Delivered
                 </div>

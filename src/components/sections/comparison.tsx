@@ -73,7 +73,7 @@ export function ComparisonSection() {
             whileInView={reduce ? undefined : { opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "0px 0px -60px 0px" }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="relative overflow-hidden rounded-3xl border-2 border-wa-green/40 bg-gradient-to-b from-[#F0FDF4] to-white p-6 shadow-glow-wa sm:p-8"
+            className="relative overflow-hidden rounded-3xl border-2 border-wa-green/40 bg-gradient-to-b from-wa-green/10 to-card p-6 shadow-glow-wa sm:p-8"
           >
             <div className="absolute right-4 top-4 rounded-full bg-gradient-wa px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
               Recommended

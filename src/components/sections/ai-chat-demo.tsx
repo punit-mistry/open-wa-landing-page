@@ -251,7 +251,7 @@ export function AiChatDemoSection() {
             className="lg:col-span-5"
           >
             <div className="flex h-full flex-col gap-4">
-              <div className="rounded-2xl border border-wa-green/20 bg-gradient-to-br from-[#F0FDF4] to-white p-5 shadow-premium">
+              <div className="rounded-2xl border border-wa-green/20 bg-gradient-to-br from-wa-green/10 to-card p-5 shadow-premium">
                 <div className="flex items-center gap-2 text-wa-green-dark">
                   <Sparkles className="h-5 w-5" />
                   <span className="text-sm font-bold">This is not a recording</span>

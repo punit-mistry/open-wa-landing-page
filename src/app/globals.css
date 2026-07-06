@@ -87,36 +87,36 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
+  --background: #0b141a;
+  --foreground: #ffffff;
+  --card: #0f1c17;
+  --card-foreground: #ffffff;
+  --popover: #0f1c17;
+  --popover-foreground: #ffffff;
   --primary: #25D366;
-  --primary-foreground: oklch(0.145 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  --primary-foreground: #0b141a;
+  --secondary: #1a2b24;
+  --secondary-foreground: #ffffff;
+  --muted: #1a2b24;
+  --muted-foreground: #a3b3ac;
+  --accent: #1a2b24;
+  --accent-foreground: #ffffff;
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
+  --border: rgba(255, 255, 255, 0.10);
+  --input: rgba(255, 255, 255, 0.12);
   --ring: #25D366;
   --chart-1: #25D366;
   --chart-2: #128C7E;
   --chart-3: #075E54;
   --chart-4: #53BDEB;
   --chart-5: #DCF8C6;
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar: #0f1c17;
+  --sidebar-foreground: #ffffff;
   --sidebar-primary: #25D366;
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1a2b24;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(255, 255, 255, 0.10);
   --sidebar-ring: #25D366;
 }
 
@@ -167,12 +167,31 @@
       radial-gradient(circle at 85% 30%, rgba(18, 140, 126, 0.10) 0px, transparent 50%),
       radial-gradient(circle at 50% 80%, rgba(37, 211, 102, 0.06) 0px, transparent 60%);
   }
+  .dark .bg-mesh-wa {
+    background-color: #0b141a;
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(37, 211, 102, 0.18) 0px, transparent 50%),
+      radial-gradient(circle at 85% 30%, rgba(18, 140, 126, 0.15) 0px, transparent 50%),
+      radial-gradient(circle at 50% 80%, rgba(37, 211, 102, 0.08) 0px, transparent 60%);
+  }
+
+  /* Subtle background — light gray in light, slightly elevated in dark */
+  .bg-subtle {
+    background-color: #F7FBF9;
+  }
+  .dark .bg-subtle {
+    background-color: #0f1c17;
+  }
 
   .glass {
     background: rgba(255, 255, 255, 0.65);
     backdrop-filter: blur(16px) saturate(160%);
     -webkit-backdrop-filter: blur(16px) saturate(160%);
     border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  .dark .glass {
+    background: rgba(15, 28, 23, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .glass-dark {
@@ -209,10 +228,26 @@
       linear-gradient(to bottom, rgba(7, 94, 84, 0.04) 1px, transparent 1px);
     background-size: 56px 56px;
   }
+  .dark .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  }
 
   .bg-dots {
     background-image: radial-gradient(rgba(18, 140, 126, 0.10) 1px, transparent 1px);
     background-size: 22px 22px;
+  }
+  .dark .bg-dots {
+    background-image: radial-gradient(rgba(37, 211, 102, 0.12) 1px, transparent 1px);
+  }
+
+  /* Dashboard inner stat background */
+  .bg-stat {
+    background-color: #F6FBF8;
+  }
+  .dark .bg-stat {
+    background-color: rgba(255, 255, 255, 0.04);
   }
 
   .mask-fade-b {
@@ -498,6 +533,6 @@
 
 /* ---------- Light/Dark body backgrounds ---------- */
 html.dark body {
-  background-color: #0b141a;
-  color: #ffffff;
+  background-color: var(--background);
+  color: var(--foreground);
 }

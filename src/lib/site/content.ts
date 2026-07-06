@@ -177,21 +177,23 @@ export const workflowNodes: WorkflowNode[] = [
 
 export type Integration = {
   name: string;
-  icon: string;
+  logo: string; // key into brandLogos
   category: string;
 };
 
 export const integrations: Integration[] = [
-  { name: "OpenWA", icon: "MessageCircle", category: "Core" },
-  { name: "OpenAI", icon: "Sparkles", category: "AI" },
-  { name: "Google Sheets", icon: "Sheet", category: "Data" },
-  { name: "HubSpot", icon: "Briefcase", category: "CRM" },
-  { name: "Zapier", icon: "Zap", category: "Automation" },
-  { name: "Slack", icon: "Hash", category: "Comms" },
-  { name: "Shopify", icon: "ShoppingBag", category: "Commerce" },
-  { name: "WooCommerce", icon: "ShoppingCart", category: "Commerce" },
-  { name: "Webhooks", icon: "Webhook", category: "Developer" },
-  { name: "REST API", icon: "Code", category: "Developer" },
+  { name: "OpenAI", logo: "OpenAI", category: "AI" },
+  { name: "Google Sheets", logo: "Google", category: "Data" },
+  { name: "HubSpot", logo: "HubSpot", category: "CRM" },
+  { name: "Zapier", logo: "Zapier", category: "Automation" },
+  { name: "Slack", logo: "Slack", category: "Comms" },
+  { name: "Shopify", logo: "Shopify", category: "Commerce" },
+  { name: "WooCommerce", logo: "WooCommerce", category: "Commerce" },
+  { name: "Notion", logo: "Notion", category: "Docs" },
+  { name: "Stripe", logo: "Stripe", category: "Payments" },
+  { name: "Salesforce", logo: "Salesforce", category: "CRM" },
+  { name: "Twilio", logo: "Twilio", category: "SMS" },
+  { name: "Mailchimp", logo: "Mailchimp", category: "Email" },
 ];
 
 export type Testimonial = {

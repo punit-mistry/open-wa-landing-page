@@ -128,7 +128,7 @@ Please contact me.`;
                 href={siteConfig.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-3 rounded-2xl border border-wa-green/30 bg-white p-4 shadow-premium transition-all hover:-translate-y-0.5 hover:shadow-glow-wa"
+                className="mt-6 inline-flex items-center gap-3 rounded-2xl border border-wa-green/30 bg-card p-4 shadow-premium transition-all hover:-translate-y-0.5 hover:shadow-glow-wa"
               >
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-wa text-white">
                   <Phone className="h-4 w-4" />
@@ -156,7 +156,7 @@ Please contact me.`;
 
           {/* Right: form with Border Beam */}
           <div className="lg:col-span-7">
-            <div className="border-beam relative rounded-3xl bg-white p-6 shadow-premium sm:p-8">
+            <div className="border-beam relative rounded-3xl bg-card p-6 shadow-premium sm:p-8">
               <AnimatePresence mode="wait">
                 {status === "success" ? (
                   <motion.div

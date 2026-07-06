@@ -2,8 +2,12 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { integrations } from "@/lib/site/content";
-import { SectionHeading, DynamicIcon } from "@/components/effects/section-heading";
+import { SectionHeading } from "@/components/effects/section-heading";
+import { brandLogos } from "@/components/brand-logos";
 import { Plug } from "lucide-react";
+
+// Build a quick lookup map for brand logos
+const logoMap = Object.fromEntries(brandLogos.map((b) => [b.name, b.Logo]));
 
 export function IntegrationsSection() {
   const reduce = useReducedMotion();
@@ -78,26 +82,29 @@ export function IntegrationsSection() {
             </defs>
           </svg>
 
-          {/* Integration chips */}
-          <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
-            {integrations.map((int, i) => (
-              <motion.div
-                key={int.name}
-                initial={reduce ? undefined : { opacity: 0, scale: 0.9 }}
-                whileInView={reduce ? undefined : { opacity: 1, scale: 1 }}
-                viewport={{ once: true, margin: "0px 0px -40px 0px" }}
-                transition={{ duration: 0.45, delay: i * 0.05 }}
-                className="group flex items-center gap-3 rounded-2xl border border-border bg-card p-3 shadow-premium transition-all duration-300 hover:-translate-y-1 hover:border-wa-green/40 hover:shadow-glow-wa"
-              >
-                <span className="inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-wa-green/10 text-wa-green-dark ring-1 ring-inset ring-wa-green/15 transition-colors group-hover:bg-gradient-wa group-hover:text-white">
-                  <DynamicIcon name={int.icon} className="h-4.5 w-4.5" />
-                </span>
-                <div className="min-w-0">
-                  <div className="truncate text-sm font-semibold text-foreground">{int.name}</div>
-                  <div className="text-[10px] text-muted-foreground">{int.category}</div>
-                </div>
-              </motion.div>
-            ))}
+          {/* Integration chips with real brand logos */}
+          <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+            {integrations.map((int, i) => {
+              const Logo = logoMap[int.logo];
+              return (
+                <motion.div
+                  key={int.name}
+                  initial={reduce ? undefined : { opacity: 0, scale: 0.9 }}
+                  whileInView={reduce ? undefined : { opacity: 1, scale: 1 }}
+                  viewport={{ once: true, margin: "0px 0px -40px 0px" }}
+                  transition={{ duration: 0.45, delay: i * 0.05 }}
+                  className="group flex items-center gap-3 rounded-2xl border border-border bg-card p-3 shadow-premium transition-all duration-300 hover:-translate-y-1 hover:border-wa-green/40 hover:shadow-glow-wa"
+                >
+                  <span className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-muted text-foreground ring-1 ring-inset ring-border transition-colors group-hover:bg-wa-green/10">
+                    {Logo ? <Logo className="h-6 w-6" /> : null}
+                  </span>
+                  <div className="min-w-0">
+                    <div className="truncate text-sm font-semibold text-foreground">{int.name}</div>
+                    <div className="text-[10px] text-muted-foreground">{int.category}</div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </div>

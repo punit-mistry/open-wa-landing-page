@@ -2,31 +2,17 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { Star } from "lucide-react";
-
-const COMPANIES = [
-  "Nova Commerce",
-  "Bloom Beauty",
-  "Pulse Fintech",
-  "MediExpress",
-  "FitFuel",
-  "Stellar Travel",
-  "Acme Retail",
-  "UrbanCart",
-  "GreenLeaf",
-  "BookMySlot",
-  "QuickSend",
-  "ZenDesk+",
-];
+import { brandLogos } from "@/components/brand-logos";
 
 export function TrustedByMarquee() {
   const reduce = useReducedMotion();
   // Duplicate list for seamless loop
-  const doubled = [...COMPANIES, ...COMPANIES];
+  const doubled = [...brandLogos, ...brandLogos];
 
   return (
     <section
       aria-label="Trusted by leading brands"
-      className="relative border-y border-border bg-[#F7FBF9] py-10"
+      className="relative border-y border-border bg-subtle py-10"
     >
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -34,7 +20,7 @@ export function TrustedByMarquee() {
           whileInView={reduce ? undefined : { opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-5 flex flex-col items-center justify-center gap-2 text-center sm:flex-row sm:gap-4"
+          className="mb-6 flex flex-col items-center justify-center gap-2 text-center sm:flex-row sm:gap-4"
         >
           <div className="flex items-center gap-1">
             {Array.from({ length: 5 }).map((_, i) => (
@@ -42,7 +28,8 @@ export function TrustedByMarquee() {
             ))}
           </div>
           <p className="text-sm text-muted-foreground">
-            Trusted by <span className="font-semibold text-foreground">412+ teams</span> across India and 14 countries
+            Integrates with the tools you already use ·{" "}
+            <span className="font-semibold text-foreground">412+ teams</span> onboarded
           </p>
         </motion.div>
       </div>
@@ -51,19 +38,21 @@ export function TrustedByMarquee() {
       <div className="relative overflow-hidden mask-fade-x">
         <div
           className="flex w-max items-center gap-12 animate-marquee-fast"
-          style={{ animationDuration: "32s" }}
+          style={{ animationDuration: "36s" }}
         >
-          {doubled.map((name, i) => (
-            <div
-              key={`${name}-${i}`}
-              className="flex items-center gap-2 whitespace-nowrap text-lg font-bold tracking-tight text-muted-foreground/70 transition-colors hover:text-foreground"
-            >
-              <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-wa text-xs font-bold text-white">
-                {name.charAt(0)}
-              </span>
-              {name}
-            </div>
-          ))}
+          {doubled.map((brand, i) => {
+            const Logo = brand.Logo;
+            return (
+              <div
+                key={`${brand.name}-${i}`}
+                className="group flex items-center gap-2.5 whitespace-nowrap text-muted-foreground transition-colors hover:text-foreground"
+                title={brand.name}
+              >
+                <Logo className="h-7 w-7 opacity-70 transition-opacity group-hover:opacity-100" />
+                <span className="text-lg font-bold tracking-tight">{brand.name}</span>
+              </div>
+            );
+          })}
         </div>
       </div>
 

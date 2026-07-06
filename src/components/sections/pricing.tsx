@@ -38,7 +38,7 @@ export function PricingSection() {
                 className={cn(
                   "group relative flex flex-col overflow-hidden rounded-3xl p-6 transition-all duration-300 sm:p-7",
                   highlighted
-                    ? "border-2 border-wa-green/40 bg-gradient-to-b from-[#F0FDF4] to-white shadow-glow-wa lg:-translate-y-3"
+                    ? "border-2 border-wa-green/40 bg-gradient-to-b from-wa-green/10 to-card shadow-glow-wa lg:-translate-y-3"
                     : "border border-border bg-card shadow-premium hover:-translate-y-1 hover:shadow-glow-wa"
                 )}
               >

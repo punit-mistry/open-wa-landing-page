@@ -62,7 +62,7 @@ export function PricingCalculatorSection() {
   return (
     <section
       id="calculator"
-      className="relative overflow-hidden bg-[#F7FBF9] py-20 lg:py-28"
+      className="relative overflow-hidden bg-subtle py-20 lg:py-28"
       aria-labelledby="calculator-heading"
     >
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-dots opacity-30" />
@@ -81,7 +81,7 @@ export function PricingCalculatorSection() {
           transition={{ duration: 0.6 }}
           className="mx-auto mt-12 max-w-4xl"
         >
-          <div className="relative overflow-hidden rounded-3xl border border-border bg-white p-6 shadow-premium sm:p-8">
+          <div className="relative overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-premium sm:p-8">
             {/* Slider section */}
             <div className="space-y-3">
               <div className="flex items-baseline justify-between">
@@ -104,7 +104,7 @@ export function PricingCalculatorSection() {
                 step={500}
                 value={messages}
                 onChange={(e) => setMessages(Number(e.target.value))}
-                className="h-2 w-full cursor-pointer appearance-none rounded-full bg-gradient-to-r from-wa-green to-[#128C7E] outline-none [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-glow-wa [&::-webkit-slider-thumb]:ring-2 [&::-webkit-slider-thumb]:ring-wa-green [&::-moz-range-thumb]:h-5 [&::-moz-range-thumb]:w-5 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:bg-white"
+                className="h-2 w-full cursor-pointer appearance-none rounded-full bg-gradient-to-r from-wa-green to-[#128C7E] outline-none [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-card [&::-webkit-slider-thumb]:shadow-glow-wa [&::-webkit-slider-thumb]:ring-2 [&::-webkit-slider-thumb]:ring-wa-green [&::-moz-range-thumb]:h-5 [&::-moz-range-thumb]:w-5 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:bg-card"
               />
 
               <div className="flex justify-between text-[10px] text-muted-foreground">
@@ -118,7 +118,7 @@ export function PricingCalculatorSection() {
 
             {/* Recommendation */}
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl border border-wa-green/30 bg-gradient-to-br from-[#F0FDF4] to-white p-5">
+              <div className="rounded-2xl border border-wa-green/30 bg-gradient-to-br from-wa-green/10 to-card p-5">
                 <div className="flex items-center justify-between">
                   <div className="inline-flex items-center gap-1.5 rounded-full bg-wa-green/15 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-wa-green-dark">
                     <Zap className="h-3 w-3" />

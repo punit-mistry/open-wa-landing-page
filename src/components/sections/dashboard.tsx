@@ -117,7 +117,7 @@ export function DashboardSection() {
   return (
     <section
       id="dashboard"
-      className="relative bg-[#F7FBF9] py-20 lg:py-28"
+      className="relative bg-subtle py-20 lg:py-28"
       aria-labelledby="dashboard-heading"
     >
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -132,15 +132,15 @@ export function DashboardSection() {
           whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "0px 0px -60px 0px" }}
           transition={{ duration: 0.6 }}
-          className="mx-auto mt-12 max-w-6xl overflow-hidden rounded-3xl border border-border bg-white shadow-premium"
+          className="mx-auto mt-12 max-w-6xl overflow-hidden rounded-3xl border border-border bg-card shadow-premium"
         >
           {/* Browser chrome */}
-          <div className="flex items-center gap-2 border-b border-border bg-[#F8FAF9] px-4 py-3">
+          <div className="flex items-center gap-2 border-b border-border bg-stat px-4 py-3">
             <span className="h-3 w-3 rounded-full bg-[#FF5F57]" />
             <span className="h-3 w-3 rounded-full bg-[#FEBC2E]" />
             <span className="h-3 w-3 rounded-full bg-[#28C840]" />
             <div className="ml-3 flex-1">
-              <div className="mx-auto max-w-xs rounded-md bg-white px-3 py-1 text-center text-[11px] text-muted-foreground ring-1 ring-border">
+              <div className="mx-auto max-w-xs rounded-md bg-card px-3 py-1 text-center text-[11px] text-muted-foreground ring-1 ring-border">
                 app.wa-automation.dev/dashboard
               </div>
             </div>
@@ -161,7 +161,7 @@ export function DashboardSection() {
             </div>
 
             {/* Chart panel */}
-            <div className="lg:col-span-7 rounded-2xl border border-border bg-white p-4 sm:p-5">
+            <div className="lg:col-span-7 rounded-2xl border border-border bg-card p-4 sm:p-5">
               <div className="mb-3 flex items-center justify-between">
                 <div>
                   <h3 className="text-sm font-semibold text-foreground">Campaign reports</h3>
@@ -179,7 +179,7 @@ export function DashboardSection() {
             </div>
 
             {/* Live chats */}
-            <div className="lg:col-span-5 rounded-2xl border border-border bg-white p-4 sm:p-5">
+            <div className="lg:col-span-5 rounded-2xl border border-border bg-card p-4 sm:p-5">
               <div className="mb-2 flex items-center justify-between">
                 <h3 className="text-sm font-semibold text-foreground">Live chats</h3>
                 <span className="inline-flex items-center gap-1 rounded-full bg-wa-green/10 px-2 py-0.5 text-[10px] font-medium text-wa-green-dark">
@@ -199,25 +199,25 @@ export function DashboardSection() {
 
             {/* Footer KPIs */}
             <div className="lg:col-span-12 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              <div className="rounded-xl bg-[#F6FBF8] p-3">
+              <div className="rounded-xl bg-stat p-3">
                 <div className="flex items-center gap-2 text-[10px] font-medium text-muted-foreground">
                   <Activity className="h-3 w-3" /> Throughput
                 </div>
                 <div className="mt-1 text-base font-bold text-foreground">1,240/min</div>
               </div>
-              <div className="rounded-xl bg-[#F6FBF8] p-3">
+              <div className="rounded-xl bg-stat p-3">
                 <div className="flex items-center gap-2 text-[10px] font-medium text-muted-foreground">
                   <MessageSquare className="h-3 w-3" /> Avg. response
                 </div>
                 <div className="mt-1 text-base font-bold text-foreground">0.4s</div>
               </div>
-              <div className="rounded-xl bg-[#F6FBF8] p-3">
+              <div className="rounded-xl bg-stat p-3">
                 <div className="flex items-center gap-2 text-[10px] font-medium text-muted-foreground">
                   <BarChart3 className="h-3 w-3" /> Open rate
                 </div>
                 <div className="mt-1 text-base font-bold text-foreground">94.1%</div>
               </div>
-              <div className="rounded-xl bg-[#F6FBF8] p-3">
+              <div className="rounded-xl bg-stat p-3">
                 <div className="flex items-center gap-2 text-[10px] font-medium text-muted-foreground">
                   <CheckCheck className="h-3 w-3" /> Conversion
                 </div>

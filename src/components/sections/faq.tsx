@@ -17,7 +17,7 @@ export function FaqSection() {
   return (
     <section
       id="faq"
-      className="relative bg-[#F7FBF9] py-20 lg:py-28"
+      className="relative bg-subtle py-20 lg:py-28"
       aria-labelledby="faq-heading"
     >
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -45,7 +45,7 @@ export function FaqSection() {
                 href={siteConfig.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 rounded-2xl border border-wa-green/30 bg-white px-4 py-3 text-sm font-semibold text-wa-green-dark shadow-premium transition-all hover:-translate-y-0.5 hover:shadow-glow-wa"
+                className="mt-6 inline-flex items-center gap-2 rounded-2xl border border-wa-green/30 bg-card px-4 py-3 text-sm font-semibold text-wa-green-dark shadow-premium transition-all hover:-translate-y-0.5 hover:shadow-glow-wa"
               >
                 <MessageCircle className="h-4 w-4" />
                 Ask {siteConfig.founder} on WhatsApp
