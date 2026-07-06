@@ -49,7 +49,7 @@ export function SiteHeader() {
             )}
           >
             {/* Logo */}
-            <a href="#top" className="flex items-center gap-2.5 shrink-0">
+            <a href="/" className="flex items-center gap-2.5 shrink-0">
               <span className="relative inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-wa shadow-glow-wa">
                 <MessageCircle className="h-5 w-5 text-white" strokeWidth={2.5} />
               </span>
@@ -80,14 +80,14 @@ export function SiteHeader() {
             <div className="hidden items-center gap-2 sm:flex">
               <ThemeToggle />
               <Button asChild variant="ghost" size="sm" className="font-medium">
-                <a href="#contact">Book Demo</a>
+                <a href="/contact">Book Demo</a>
               </Button>
               <Button
                 asChild
                 size="sm"
                 className="bg-gradient-wa font-semibold text-white shadow-glow-wa hover:opacity-95"
               >
-                <a href="#contact">Start Free</a>
+                <a href="/contact">Start Free</a>
               </Button>
             </div>
 
@@ -120,7 +120,7 @@ export function SiteHeader() {
               onClick={() => setMobileOpen(false)}
             />
             <motion.nav
-              className="absolute right-0 top-0 flex h-full w-[80%] max-w-xs flex-col gap-1 bg-white p-6 pt-24 shadow-2xl"
+              className="absolute right-0 top-0 flex h-full w-[80%] max-w-xs flex-col gap-1 bg-background p-6 pt-24 shadow-2xl"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
@@ -144,14 +144,14 @@ export function SiteHeader() {
                   className="w-full font-medium"
                   onClick={() => setMobileOpen(false)}
                 >
-                  <a href="#contact">Book Demo</a>
-                </Button>
-                <Button
-                  asChild
-                  className="w-full bg-gradient-wa font-semibold text-white shadow-glow-wa"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  <a href="#contact">Start Free</a>
+                  <a href="/contact">Book Demo</a>
+                    </Button>
+                    <Button
+                      asChild
+                      className="w-full bg-gradient-wa font-semibold text-white shadow-glow-wa"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      <a href="/contact">Start Free</a>
                 </Button>
               </div>
               <a

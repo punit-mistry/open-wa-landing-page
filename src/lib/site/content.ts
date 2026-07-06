@@ -36,13 +36,13 @@ export const siteConfig = {
 };
 
 export const navLinks = [
-  { label: "Features", href: "#features" },
-  { label: "How it works", href: "#how-it-works" },
-  { label: "Workflow", href: "#workflow" },
-  { label: "Dashboard", href: "#dashboard" },
-  { label: "Integrations", href: "#integrations" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Features", href: "/features" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Blog", href: "/blog" },
+  { label: "How it works", href: "/#how-it-works" },
+  { label: "Integrations", href: "/#integrations" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export type Feature = {
