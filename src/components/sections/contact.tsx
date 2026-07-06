@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Confetti } from "@/components/effects/confetti";
 import { siteConfig, businessTypes } from "@/lib/site/content";
 
 const contactSchema = z.object({
@@ -34,6 +35,7 @@ export function ContactSection() {
   const reduce = useReducedMotion();
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [whatsappUrl, setWhatsappUrl] = useState<string>("");
+  const [showConfetti, setShowConfetti] = useState(false);
 
   const {
     register,
@@ -79,6 +81,9 @@ Please contact me.`;
     setTimeout(() => {
       setWhatsappUrl(url);
       setStatus("success");
+      setShowConfetti(true);
+      // Reset confetti flag after the animation completes
+      setTimeout(() => setShowConfetti(false), 3000);
       // Open WhatsApp in a new tab
       window.open(url, "_blank", "noopener,noreferrer");
     }, 700);
@@ -90,6 +95,7 @@ Please contact me.`;
       className="relative overflow-hidden bg-background py-20 lg:py-28"
       aria-labelledby="contact-heading"
     >
+      <Confetti trigger={showConfetti} />
       {/* Background */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute left-1/4 top-10 h-72 w-72 rounded-full bg-wa-green/10 blur-3xl" />

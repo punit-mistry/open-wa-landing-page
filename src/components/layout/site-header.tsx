@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { navLinks, siteConfig } from "@/lib/site/content";
+import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
@@ -77,6 +78,7 @@ export function SiteHeader() {
 
             {/* Desktop CTAs */}
             <div className="hidden items-center gap-2 sm:flex">
+              <ThemeToggle />
               <Button asChild variant="ghost" size="sm" className="font-medium">
                 <a href="#contact">Book Demo</a>
               </Button>
