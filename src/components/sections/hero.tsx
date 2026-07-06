@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Sparkles, Check, PlayCircle, Phone, Bot, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { VideoDemoModal } from "@/components/effects/video-demo-modal";
 import { siteConfig } from "@/lib/site/content";
 
 const floatVar = (delay: number, y: number) => ({
@@ -100,7 +101,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.25 }}
-              className="mt-8 flex flex-col gap-3 sm:flex-row"
+              className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap"
             >
               <Button asChild size="lg" className="group bg-gradient-wa font-semibold text-white shadow-glow-wa hover:opacity-95">
                 <a href="#contact">
@@ -114,6 +115,10 @@ export function HeroSection() {
                   Book Demo
                 </a>
               </Button>
+              <VideoDemoModal>
+                <span className="hidden sm:inline-flex">Watch 2-min demo</span>
+                <span className="sm:hidden">Demo</span>
+              </VideoDemoModal>
             </motion.div>
 
             {/* Trust strip */}

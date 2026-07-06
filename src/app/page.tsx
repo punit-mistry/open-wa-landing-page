@@ -6,14 +6,18 @@ import { SmoothScroll } from "@/components/layout/smooth-scroll";
 import { GlobalCounterBanner } from "@/components/layout/global-counter-banner";
 import { KeyboardShortcuts } from "@/components/layout/keyboard-shortcuts";
 import { KeyboardHint } from "@/components/layout/keyboard-hint";
+import { StickyScrollCta } from "@/components/layout/sticky-scroll-cta";
 import { CursorSpotlight } from "@/components/effects/cursor-spotlight";
+import { CommandPalette } from "@/components/effects/command-palette";
 import { LiveActivityFeed } from "@/components/sections/live-activity-feed";
 import { HeroSection } from "@/components/sections/hero";
 import { TrustedByMarquee } from "@/components/sections/trusted-by";
+import { BentoSection } from "@/components/sections/bento";
 import { FeaturesSection } from "@/components/sections/features";
 import { HowItWorksSection } from "@/components/sections/how-it-works";
 import { WorkflowSection } from "@/components/sections/workflow";
 import { AiChatDemoSection } from "@/components/sections/ai-chat-demo";
+import { UseCasesSection } from "@/components/sections/use-cases";
 import { DashboardSection } from "@/components/sections/dashboard";
 import { IntegrationsSection } from "@/components/sections/integrations";
 import { AnalyticsSection } from "@/components/sections/analytics";
@@ -21,7 +25,12 @@ import { ComparisonSection } from "@/components/sections/comparison";
 import { TestimonialsSection } from "@/components/sections/testimonials";
 import { PricingSection } from "@/components/sections/pricing";
 import { PricingCalculatorSection } from "@/components/sections/pricing-calculator";
+import { RoiCalculatorSection } from "@/components/sections/roi-calculator";
+import { ApiPlaygroundSection } from "@/components/sections/api-playground";
+import { SecuritySection } from "@/components/sections/security";
 import { FaqSection } from "@/components/sections/faq";
+import { FounderNoteSection } from "@/components/sections/founder-note";
+import { NewsletterSection } from "@/components/sections/newsletter";
 import { ContactSection } from "@/components/sections/contact";
 import { FinalCtaSection } from "@/components/sections/final-cta";
 
@@ -42,23 +51,32 @@ export default function Home() {
       <KeyboardHint />
       <GlobalCounterBanner />
       <LiveActivityFeed />
+      <StickyScrollCta />
+      <CommandPalette />
 
       <SiteHeader />
       <main className="flex min-h-screen flex-col">
         <HeroSection />
         <TrustedByMarquee />
+        <BentoSection />
         <FeaturesSection />
         <HowItWorksSection />
         <WorkflowSection />
         <AiChatDemoSection />
+        <UseCasesSection />
         <DashboardSection />
+        <ApiPlaygroundSection />
         <IntegrationsSection />
         <AnalyticsSection />
+        <RoiCalculatorSection />
         <ComparisonSection />
         <TestimonialsSection />
         <PricingSection />
         <PricingCalculatorSection />
+        <SecuritySection />
         <FaqSection />
+        <FounderNoteSection />
+        <NewsletterSection />
         <ContactSection />
         <FinalCtaSection />
       </main>
