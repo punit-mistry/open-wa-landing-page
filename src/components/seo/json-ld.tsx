@@ -48,7 +48,7 @@ function LocalBusinessSchema() {
     description: siteConfig.description,
     url: siteConfig.url,
     telephone: siteConfig.phone,
-    image: `${siteConfig.url}/og.png`,
+    image: `${siteConfig.url}/og`,
     priceRange: "₹₹",
     founder: {
       "@type": "Person",

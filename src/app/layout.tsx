@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { SiteJsonLd } from "@/components/seo/json-ld";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { siteConfig } from "@/lib/site/content";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -18,7 +19,7 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const SITE_URL = "https://whatsapp-automation.punitmistry.dev";
+const SITE_URL = siteConfig.url;
 const OWNER_NAME = "Punit Mistry";
 const OWNER_PHONE = "+91 82860 75880";
 const BRAND_NAME = "WhatsApp Automation Platform";
@@ -86,7 +87,7 @@ export const metadata: Metadata = {
       "Automate conversations, campaigns, follow-ups, AI replies, CRM integrations, and customer engagement using OpenWA. Built by Punit Mistry.",
     images: [
       {
-        url: "/og.png",
+        url: "/og",
         width: 1200,
         height: 630,
         alt: "WhatsApp Automation Platform by Punit Mistry",
@@ -98,7 +99,7 @@ export const metadata: Metadata = {
     title: "Automate WhatsApp Like Never Before",
     description:
       "OpenWA-powered WhatsApp Automation Platform by Punit Mistry. Bulk messaging, AI replies, CRM, campaigns, analytics.",
-    images: ["/og.png"],
+    images: ["/og"],
     creator: "@punitmistry",
   },
   icons: {

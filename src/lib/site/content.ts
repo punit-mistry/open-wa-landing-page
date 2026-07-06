@@ -1,4 +1,4 @@
-const SITE_URL = "https://whatsapp-automation.punitmistry.dev";
+const SITE_URL = "https://open-wa-landing-page.vercel.app";
 
 export const siteConfig = {
   name: "WhatsApp Automation Platform",
