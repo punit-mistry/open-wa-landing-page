@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+Sitemap: https://whatsapp-automation.punitmistry.dev/sitemap.xml
+Host: https://whatsapp-automation.punitmistry.dev
