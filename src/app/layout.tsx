@@ -3,6 +3,7 @@ import { Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { SiteJsonLd } from "@/components/seo/json-ld";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -134,6 +135,7 @@ export default function RootLayout({
         className={`${inter.variable} ${geistMono.variable} font-sans antialiased bg-background text-foreground overflow-x-hidden`}
       >
         {children}
+        <SpeedInsights />
         <Toaster />
       </body>
     </html>
