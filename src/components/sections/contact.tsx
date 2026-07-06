@@ -145,7 +145,7 @@ Please contact me.`;
                   { v: "24/7", l: "AI bot" },
                   { v: "Free", l: "Demo call" },
                 ].map((s) => (
-                  <div key={s.l} className="rounded-xl bg-[#F6FBF8] p-3">
+                  <div key={s.l} className="rounded-xl bg-secondary/30 dark:bg-secondary/20 p-3">
                     <div className="text-sm font-bold text-foreground">{s.v}</div>
                     <div className="text-[10px] text-muted-foreground">{s.l}</div>
                   </div>

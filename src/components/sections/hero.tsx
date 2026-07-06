@@ -4,6 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Sparkles, Check, PlayCircle, Phone, Bot, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { VideoDemoModal } from "@/components/effects/video-demo-modal";
+import { AudioPlayer } from "@/components/effects/audio-player";
 import { siteConfig } from "@/lib/site/content";
 
 const floatVar = (delay: number, y: number) => ({
@@ -163,54 +164,12 @@ export function HeroSection() {
                       <span className="ml-2 text-[10px] font-medium text-muted-foreground">wa-automation.app/dashboard</span>
                     </div>
 
-                    {/* Stat row */}
-                    <div className="grid grid-cols-3 gap-2">
-                      {[
-                        { l: "Active Users", v: "4,212", up: "+12%" },
-                        { l: "Sent Today", v: "84.2K", up: "+8%" },
-                        { l: "Delivery", v: "97.3%", up: "+1.4%" },
-                      ].map((s) => (
-                        <div key={s.l} className="rounded-lg bg-[#F6FBF8] p-2">
-                          <div className="text-[9px] uppercase tracking-wide text-muted-foreground">{s.l}</div>
-                          <div className="text-sm font-bold text-foreground">{s.v}</div>
-                          <div className="text-[9px] font-medium text-wa-green-dark">{s.up}</div>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Chart */}
-                    <div className="mt-2 rounded-lg bg-[#F6FBF8] p-2">
-                      <div className="mb-1.5 flex items-center justify-between">
-                        <div className="text-[10px] font-semibold text-foreground">Messages · 7d</div>
-                        <div className="text-[9px] text-muted-foreground">Live</div>
-                      </div>
-                      <svg viewBox="0 0 200 60" className="h-16 w-full" preserveAspectRatio="none">
-                        <defs>
-                          <linearGradient id="hero-chart-fill" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stopColor="#25D366" stopOpacity="0.35" />
-                            <stop offset="100%" stopColor="#25D366" stopOpacity="0" />
-                          </linearGradient>
-                        </defs>
-                        <motion.path
-                          d="M0 45 L25 38 L50 42 L75 28 L100 32 L125 18 L150 22 L175 10 L200 14 L200 60 L0 60 Z"
-                          fill="url(#hero-chart-fill)"
-                          initial={reduce ? undefined : { opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          transition={{ duration: 0.8, delay: 0.6 }}
-                        />
-                        <motion.path
-                          d="M0 45 L25 38 L50 42 L75 28 L100 32 L125 18 L150 22 L175 10 L200 14"
-                          fill="none"
-                          stroke="#25D366"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          initial={reduce ? undefined : { pathLength: 0 }}
-                          animate={{ pathLength: 1 }}
-                          transition={{ duration: 1.2, delay: 0.6, ease: "easeInOut" }}
-                        />
-                      </svg>
-                    </div>
+                    <img
+                      src="/images/dashboard-preview.png"
+                      alt="OpenWA Dashboard Preview"
+                      className="w-full rounded-lg"
+                      loading="eager"
+                    />
                   </div>
                 </div>
               </motion.div>
@@ -314,6 +273,9 @@ export function HeroSection() {
                   </div>
                 </div>
               </motion.div>
+
+              {/* Audio player */}
+              <AudioPlayer />
 
               {/* Tick badge */}
               <motion.div

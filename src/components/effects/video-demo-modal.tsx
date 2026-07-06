@@ -68,33 +68,16 @@ export function VideoDemoModal({ children }: { children?: React.ReactNode }) {
                 <X className="h-4 w-4" />
               </button>
 
-              {/* Video placeholder — gradient with play button */}
-              <div className="relative aspect-video bg-gradient-to-br from-[#075E54] via-[#128C7E] to-[#25D366]">
-                {/* Animated blobs */}
-                <div aria-hidden className="pointer-events-none absolute inset-0">
-                  <div className="absolute left-10 top-10 h-40 w-40 rounded-full bg-white/10 blur-3xl animate-blob" />
-                  <div className="absolute bottom-10 right-10 h-40 w-40 rounded-full bg-white/15 blur-3xl animate-blob" style={{ animationDelay: "3s" }} />
-                </div>
-
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
-                  <button
-                    onClick={() => setOpen(false)}
-                    className="group relative inline-flex h-20 w-20 items-center justify-center rounded-full bg-white/15 backdrop-blur-md transition-all hover:scale-110 hover:bg-white/25"
-                    aria-label="Play demo"
-                  >
-                    {!reduce && (
-                      <span className="absolute inset-0 -z-10 rounded-full bg-white/30 animate-ping" style={{ animationDuration: "2s" }} />
-                    )}
-                    <Play className="h-8 w-8 translate-x-0.5" fill="currentColor" />
-                  </button>
-                  <h3 className="mt-6 text-2xl font-bold drop-shadow-sm">
-                    See WA Automation in action
-                  </h3>
-                  <p className="mt-1 flex items-center gap-1.5 text-sm text-white/80">
-                    <Clock className="h-3.5 w-3.5" />
-                    2 min · Full product walkthrough
-                  </p>
-                </div>
+              <div className="relative aspect-video bg-black">
+                <video
+                  className="h-full w-full object-contain"
+                  src="/video/demo-intro.mp4"
+                  controls
+                  autoPlay
+                  playsInline
+                >
+                  Your browser does not support the video tag.
+                </video>
               </div>
 
               {/* Footer */}
